@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center justify-center bg-accent-coral w-8 h-8 rounded-md text-white mr-2">
                 <Heart className="w-5 h-5" />
               </div>
-              <span className="text-xl font-bold text-gray-800">MindWell</span>
+              <span className="text-xl font-bold text-gray-800">Serenity Ai</span>
             </div>
             <p className="mt-4 text-gray-500 text-sm">
               Empowering you on your mental health journey through accessible resources, professional support, and self-care tools.
