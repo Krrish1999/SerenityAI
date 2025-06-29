@@ -1,10 +1,10 @@
-# MindWell - Mental Health & Wellness Platform
+# Serenity Ai - Mental Health & Wellness Platform
 
-MindWell is a comprehensive mental health and wellness platform designed to connect users with professional therapists, provide tools for self-care, and offer accessible resources for improved mental well-being. It aims to empower individuals on their journey to mental wellness through a secure, intuitive, and feature-rich application.
+Serenity Ai is a comprehensive mental health and wellness platform designed to connect users with professional therapists, provide tools for self-care, and offer accessible resources for improved mental well-being. Our mission is to empower individuals on their journey to mental wellness through a secure, intuitive, and feature-rich application.
 
 ## ✨ Features
 
-MindWell is built with a robust set of features catering to both patients seeking support and therapists providing services.
+Serenity Ai is built with a robust set of features catering to both patients seeking support and therapists providing services.
 
 ### 🔐 User Management & Authentication
 
@@ -71,7 +71,7 @@ MindWell is built with a robust set of features catering to both patients seekin
 
 * **Patient Overview**: A dedicated dashboard for therapists to manage their patients.
 * **Patient List**: View a list of all assigned patients with quick summaries including age, status (stable, monitoring, crisis), average mood, and last activity.
-* **Patient Search & Filter**: Search for patients by name and filter by status.
+* **Patient Search & Filter**: Search for patients by name or email and filter by status (stable, monitoring, crisis).
 * **Patient Profile**: Detailed view of individual patient profiles, including:
   * **Key Metrics**: Average mood, journal entry count, engagement score, next session.
   * **Mood Trends**: Visual chart of the patient's mood over time.
@@ -91,7 +91,7 @@ MindWell is built with a robust set of features catering to both patients seekin
 
 ## 🚀 Technology Stack
 
-MindWell is built using modern web technologies to ensure a fast, scalable, and maintainable application.
+Serenity Ai is built using modern web technologies to ensure a fast, scalable, and maintainable application.
 
 * **Frontend**:
   * **React**: A JavaScript library for building user interfaces.
@@ -118,7 +118,7 @@ MindWell is built using modern web technologies to ensure a fast, scalable, and 
 
 ## ⚙️ Setup and Installation
 
-Follow these steps to get MindWell up and running on your local machine.
+Follow these steps to get Serenity Ai up and running on your local machine.
 
 ### Prerequisites
 
@@ -134,7 +134,7 @@ Follow these steps to get MindWell up and running on your local machine.
 
 ```bash
 git clone <repository-url>
-cd mindwell
+cd Serenity Ai
 ```
 
 ### 2. Install Dependencies
@@ -228,14 +228,54 @@ This will start the development server, usually at http://localhost:5173.
 
 The project includes a detailed guide for testing the Stripe integration. Please refer to `STRIPE_TESTING_GUIDE.md` in the root directory for comprehensive instructions on testing payment flows, subscriptions, and troubleshooting.
 
+### Testing User Accounts
+
+For testing purposes, you can use these sample accounts with different roles:
+
+**Therapist accounts:**
+- Email: `dr.johnson@Serenity Ai.com` - Anxiety specialist
+- Email: `dr.patel@Serenity Ai.com` - Relationship counselor
+- Email: `dr.thompson@Serenity Ai.com` - Trauma specialist
+
+**Patient accounts:**
+- Email: `alice.johnson@email.com` - Anxiety patient
+- Email: `bob.smith@email.com` - Depression patient
+- Email: `emma.brown@email.com` - Grief counseling
+
+All test accounts use the password: `Password123!`
+
 ## 🌐 Deployment
 
-This application can be easily deployed to platforms like Netlify. Ensure all environment variables are correctly configured in your deployment environment.
+This application can be easily deployed to platforms like Netlify or Vercel. Follow these steps for deployment:
+
+1. Build the project: `npm run build`
+2. Configure environment variables on your hosting platform
+3. Deploy the contents of the `dist` folder
+
+Ensure all environment variables from `.env.example` are correctly configured in your deployment environment.
 
 ## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, please feel free to open an issue or submit a pull request.
 
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Submit a pull request
+
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+- **Authentication errors:** Make sure your Supabase credentials are correctly configured in `.env`
+- **Stripe integration issues:** Check the `STRIPE_TESTING_GUIDE.md` for solutions
+- **Database connectivity:** Verify your Supabase project is running and RLS policies are correctly set up
+
+For more help, please open an issue on the repository.
