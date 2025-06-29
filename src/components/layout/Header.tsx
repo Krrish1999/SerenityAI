@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
               <div className="flex items-center justify-center bg-accent-coral w-8 h-8 rounded-md text-white mr-2">
                 <Heart className="w-5 h-5" />
               </div>
-              <span className="text-xl font-bold text-gray-800">MindWell</span>
+              <span className="text-xl font-bold text-gray-800">Serenity Ai</span>
             </Link>
           </div>
           
