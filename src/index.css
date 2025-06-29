@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    @apply bg-neutral-off-white text-gray-700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-relaxed text-gray-800;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Enhanced button interactions with subtle effects */
+button, 
+.button,
+[role="button"],
+[type="button"],
+[type="submit"] {
+  @apply cursor-pointer transition-all duration-200;
+}
+
+button:hover,
+.button:hover,
+[role="button"]:hover,
+[type="button"]:hover,
+[type="submit"]:hover {
+  transform: translateY(-1px);
+  @apply shadow-md;
+}
+
+button:active,
+.button:active,
+[role="button"]:active,
+[type="button"]:active,
+[type="submit"]:active {
+  transform: translateY(0);
+  @apply shadow-sm;
+}
+
+/* Interactive elements */
+*[onclick],
+*[href],
+.clickable {
+  @apply cursor-pointer transition-all duration-200;
+}
+
+/* Improved focus states */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  @apply outline-2 outline-accent-teal outline-offset-2;
+}
+
+/* Common animations */
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation keyframes */
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(-2px);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Chat bubbles */
+.chat-bubble-user {
+  @apply bg-white text-gray-800 rounded-2xl rounded-tr-md px-4 py-3 shadow-sm;
+}
+
+.chat-bubble-ai {
+  @apply bg-pastel-teal text-gray-800 rounded-2xl rounded-tl-md px-4 py-3;
+}
