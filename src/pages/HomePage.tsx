@@ -20,7 +20,7 @@ export const HomePage: React.FC = () => {
             <Button 
               size="lg"
               variant="primary" 
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white px-4 p-2 rounded-full text-blue-600 hover:bg-gray-100"
               onClick={() => {}}
             >
               Get Started
@@ -28,7 +28,7 @@ export const HomePage: React.FC = () => {
             <Button 
               size="lg"
               variant="outline" 
-              className="border-white text-white hover:bg-white/10"
+              className="border-white px-4 p-2 rounded-full bg  text-white bg-white/10 hover:bg-white/10"
               onClick={() => {}}
             >
               Learn More
