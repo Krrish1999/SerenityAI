@@ -20,7 +20,7 @@ export const HomePage: React.FC = () => {
             <Button 
               size="lg"
               variant="primary" 
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white px-4 p-2 rounded-full text-blue-600 hover:bg-gray-100"
               onClick={() => {}}
             >
               Get Started
@@ -28,7 +28,7 @@ export const HomePage: React.FC = () => {
             <Button 
               size="lg"
               variant="outline" 
-              className="border-white text-white hover:bg-white/10"
+              className="border-white px-4 p-2 rounded-full bg  text-white bg-white/10 hover:bg-white/10"
               onClick={() => {}}
             >
               Learn More
@@ -40,7 +40,7 @@ export const HomePage: React.FC = () => {
       {/* Features Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">How MindWell Helps You</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">How Serenity Ai Helps You</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition-transform hover:scale-105">
@@ -104,7 +104,7 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "MindWell has been instrumental in my mental health journey. The journal feature helps me track patterns in my mood, and my therapist can see my progress. It's made a world of difference."
+                "Serenity Ai has been instrumental in my mental health journey. The journal feature helps me track patterns in my mood, and my therapist can see my progress. It's made a world of difference."
               </p>
             </div>
             
@@ -127,7 +127,7 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "Finding the right therapist was always a challenge until I discovered MindWell. The platform made it easy to connect with someone who truly understands my needs. I've made incredible progress."
+                "Finding the right therapist was always a challenge until I discovered Serenity Ai. The platform made it easy to connect with someone who truly understands my needs. I've made incredible progress."
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export const HomePage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Wellness Journey?</h2>
           <p className="text-lg text-gray-600 mb-8">
-            Join thousands of others who've taken control of their mental health with MindWell.
+            Join thousands of others who've taken control of their mental health with Serenity Ai.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/signup">

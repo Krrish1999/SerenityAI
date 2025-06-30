@@ -153,7 +153,7 @@ export const ProfilePage: React.FC = () => {
   
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold text-white mb-6">Account Settings</h1>
+      <h1 className="text-2xl font-bold  text-gray-500 mb-6">Account Settings</h1>
       
       <div className="grid md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
