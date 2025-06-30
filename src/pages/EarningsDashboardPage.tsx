@@ -214,7 +214,7 @@ export const EarningsDashboardPage: React.FC = () => {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-700/30 rounded-lg p-4">
+            <div className="bg-white/10  rounded-lg p-4">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-gray-400">Gross Revenue</span>
                 <span className="text-white font-medium">
@@ -226,7 +226,7 @@ export const EarningsDashboardPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gray-700/30 rounded-lg p-4">
+            <div className="bg-white/10  rounded-lg p-4">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-gray-400">Platform Fees (5%)</span>
                 <span className="text-red-400 font-medium">
@@ -238,7 +238,7 @@ export const EarningsDashboardPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gray-700/30 rounded-lg p-4">
+            <div className="bg-white/10 rounded-lg p-4">
               <div className="flex justify-between items-center mb-2">
                 <span className="text-gray-400">Your Earnings (95%)</span>
                 <span className="text-green-400 font-medium">
