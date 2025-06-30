@@ -117,6 +117,7 @@ export const SignupForm: React.FC = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <Input
             label="Full Name"
+            placeholder="Jhon Doe"
             type="text"
             id="fullName"
             icon={<User className="h-5 w-5" />}
@@ -138,6 +139,7 @@ export const SignupForm: React.FC = () => {
           
           <Input
             label="Email"
+            placeholder="example@gmail.com"
             type="email"
             id="email"
             icon={<Mail className="h-5 w-5" />}
@@ -190,7 +192,7 @@ export const SignupForm: React.FC = () => {
           />
           
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-700">
               I am a:
             </label>
             <div className="grid grid-cols-2 gap-3">
@@ -209,7 +211,7 @@ export const SignupForm: React.FC = () => {
                   <div className="flex items-center">
                     <User className="w-5 h-5 mr-2 text-blue-400" />
                     <div>
-                      <div className="font-medium text-white">Patient</div>
+                      <div className="font-medium text-gray-500">Patient</div>
                       <div className="text-xs text-gray-400">Seeking mental health support</div>
                     </div>
                   </div>
@@ -231,7 +233,7 @@ export const SignupForm: React.FC = () => {
                   <div className="flex items-center">
                     <UserCheck className="w-5 h-5 mr-2 text-green-400" />
                     <div>
-                      <div className="font-medium text-white">Therapist</div>
+                      <div className="font-medium text-gray-500">Therapist</div>
                       <div className="text-xs text-gray-400">Providing mental health services</div>
                     </div>
                   </div>
