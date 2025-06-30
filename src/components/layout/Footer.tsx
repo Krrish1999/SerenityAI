@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} MindWell. All rights reserved.
+            &copy; {new Date().getFullYear()} Serenity Ai. All rights reserved.
           </p>
           <p className="text-sm text-gray-500 mt-2 md:mt-0 flex items-center">
             Made with <Heart className="w-4 h-4 mx-1 text-accent-coral" /> for mental well-being
