@@ -116,7 +116,7 @@ export const ResourceDetailPage: React.FC = () => {
             variant="ghost"
             size="sm"
             onClick={() => navigate('/resources')}
-            className="text-gray-600 hover:text-accent-teal mr-4"
+            className="text-gray-600 hover:text-accent-teal mr-4 flex items-center px-2 rounded-xl"
             icon={<ArrowLeft className="w-4 h-4" />}
           >
             Back to resources
@@ -196,7 +196,7 @@ export const ResourceDetailPage: React.FC = () => {
                   ></iframe>
                   
                   {/* Fallback if video fails to load */}
-                  <div className="video-fallback hidden absolute inset-0 flex flex-col items-center justify-center p-6 bg-gray-100 text-gray-800">
+                  <div className="video-fallback hidden absolute inset-0  flex-col items-center justify-center p-6 bg-gray-100 text-gray-800">
                     <AlertTriangle className="w-12 h-12 text-accent-coral mb-4" />
                     <h3 className="text-lg font-medium mb-2 text-center">Unable to load video</h3>
                     <p className="text-sm text-center mb-4 text-gray-600">

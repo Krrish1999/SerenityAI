@@ -156,13 +156,13 @@ export const BookAppointmentPage: React.FC = () => {
           size="sm"
           icon={<ArrowLeft className="w-4 h-4" />}
           onClick={() => step === 'payment' ? setStep('booking') : navigate(`/therapists/${therapistId}`)}
-          className="mr-4 text-gray-400 hover:text-white"
+          className="mr-4 text-gray-400 hover:text-teal-800/50 flex items-center px-2 rounded-xl"
         >
           Back
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-white">Book Appointment</h1>
-          <p className="text-gray-400">Schedule your session with Dr. {currentTherapist.user_id}</p>
+          <h1 className="text-2xl font-bold text-gray-500">Book Appointment</h1>
+          <p className="text-gray-400">Schedule your session with Dr. {currentTherapist.full_name}</p>
         </div>
       </div>
 
@@ -194,8 +194,8 @@ export const BookAppointmentPage: React.FC = () => {
                   <p className="text-gray-400 text-sm mb-3">{selectedService.description}</p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">Price:</span>
-                    <span className="text-green-400 font-semibold">
+                    <span className="text-gray-500 text-sm">Price:</span>
+                    <span className="text-green-500 font-semibold">
                       {formatPriceFromDollars(selectedService.price_amount)}
                     </span>
                   </div>
@@ -212,11 +212,11 @@ export const BookAppointmentPage: React.FC = () => {
 
                 {/* Free Session Notice */}
                 {user?.free_session_credit && selectedService.type === 'one_time' && (
-                  <div className="mt-4 p-3 bg-green-900/20 border border-green-600/30 rounded-lg">
-                    <p className="text-green-300 text-sm font-medium">
+                  <div className="mt-4 p-3 border border-green-600/30 rounded-lg">
+                    <p className="text-green-500 text-sm font-medium">
                       🎉 Your first session is FREE!
                     </p>
-                    <p className="text-green-400 text-xs mt-1">
+                    <p className="text-green-600 text-xs mt-1">
                       This session will use your complimentary first session credit.
                     </p>
                   </div>
@@ -237,7 +237,7 @@ export const BookAppointmentPage: React.FC = () => {
               <CardContent className="space-y-6">
                 {/* Date Selection */}
                 <div>
-                  <h3 className="font-medium text-white mb-3">Choose a Date</h3>
+                  <h3 className="font-medium text-gray-500 mb-3">Choose a Date</h3>
                   <div className="grid grid-cols-5 gap-2">
                     {availableDates.slice(0, 10).map((date) => (
                       <button
@@ -245,8 +245,8 @@ export const BookAppointmentPage: React.FC = () => {
                         onClick={() => handleDateSelect(date)}
                         className={`p-3 rounded-lg border text-center transition-colors ${
                           selectedDate === date
-                            ? 'bg-blue-600 text-white border-blue-600'
-                            : 'border-gray-600 text-gray-300 hover:border-blue-400 hover:text-white'
+                            ? 'bg-accent-teal text-white border-accent-teal'
+                            : 'border-gray-600 text-gray-400 hover:border-blue-400'
                         }`}
                       >
                         <div className="text-xs font-medium">
@@ -263,7 +263,7 @@ export const BookAppointmentPage: React.FC = () => {
                 {/* Time Selection */}
                 {selectedDate && (
                   <div>
-                    <h3 className="font-medium text-white mb-3">Available Times</h3>
+                    <h3 className="font-medium text-gray-500 mb-3">Available Times</h3>
                     <div className="grid grid-cols-3 gap-2">
                       {availableSlots.map((time) => (
                         <button
@@ -271,8 +271,8 @@ export const BookAppointmentPage: React.FC = () => {
                           onClick={() => handleTimeSelect(time)}
                           className={`p-3 rounded-lg border text-center transition-colors ${
                             selectedTime === time
-                              ? 'bg-blue-600 text-white border-blue-600'
-                              : 'border-gray-600 text-gray-300 hover:border-blue-400 hover:text-white'
+                              ? 'bg-accent-teal text-white border-accent-teal'
+                              : 'border-gray-600 text-gray-00 hover:border-blue-400'
                           }`}
                         >
                           <Clock className="w-4 h-4 mx-auto mb-1" />
@@ -286,16 +286,16 @@ export const BookAppointmentPage: React.FC = () => {
                 {/* Booking Summary & Continue */}
                 {selectedDate && selectedTime && (
                   <div className="border-t border-gray-700 pt-6">
-                    <div className="bg-gray-700/30 rounded-lg p-4 mb-4">
-                      <h4 className="font-medium text-white mb-2">Booking Summary</h4>
+                    <div className=" rounded-lg p-4 mb-4">
+                      <h4 className="font-medium text-gray-500 mb-2">Booking Summary</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
                           <span className="text-gray-400">Service:</span>
-                          <span className="text-white">{selectedService.name}</span>
+                          <span className="text-gray-600s">{selectedService.name}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-400">Date:</span>
-                          <span className="text-white">
+                          <span className="text-gray-600">
                             {new Date(selectedDate).toLocaleDateString('en-US', { 
                               weekday: 'long', 
                               year: 'numeric', 
@@ -306,13 +306,13 @@ export const BookAppointmentPage: React.FC = () => {
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-400">Time:</span>
-                          <span className="text-white">
+                          <span className="text-gray-600">
                             {format(new Date(`2000-01-01T${selectedTime}`), 'h:mm a')}
                           </span>
                         </div>
                         <div className="flex justify-between font-medium border-t border-gray-600 pt-2">
                           <span className="text-gray-400">Total:</span>
-                          <span className="text-white">
+                          <span className="text-gray-500">
                             {user?.free_session_credit && selectedService.type === 'one_time' 
                               ? 'FREE' 
                               : formatPriceFromDollars(selectedService.price_amount)
@@ -324,7 +324,8 @@ export const BookAppointmentPage: React.FC = () => {
 
                     <Button 
                       onClick={proceedToPayment}
-                      className="w-full"
+                      variant='primary'
+                      className="w-full flex justify-center items-center p-2 rounded-xl bg-accent-teal text-white hover:bg-accent-teal/90 focus:ring-2 focus:ring-accent-teal/50"
                       icon={<CreditCard className="w-4 h-4" />}
                     >
                       {user?.free_session_credit && selectedService.type === 'one_time' 

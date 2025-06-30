@@ -55,6 +55,10 @@ export const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
+  function handleLogout() {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">

@@ -261,9 +261,11 @@ export const PaymentHistoryPage: React.FC = () => {
                   ? 'Your payment history will appear here once you book sessions.' 
                   : `You don't have any ${filter} payments.`}
               </p>
-              <Button onClick={() => navigate('/therapists')}>
-                Find a Therapist
-              </Button>
+                {user?.role === "patient" && (
+                <Button onClick={() => navigate('/therapists')}>
+                  Find a Therapist
+                </Button>
+                )}
             </div>
           )}
         </CardContent>
