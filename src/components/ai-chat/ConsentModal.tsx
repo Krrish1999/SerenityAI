@@ -46,7 +46,7 @@ export const ConsentModal: React.FC<ConsentModalProps> = ({ onConsentGiven }) =>
         <div className="flex space-x-4">
           <Button
             onClick={() => onConsentGiven(true)}
-            className="flex-1 bg-accent-teal hover:bg-accent-teal/90 flex items-center rounded-xl"
+            className="flex-1 bg-accent-teal hover:bg-accent-teal/90 text-white flex items-center rounded-xl"
             icon={<Check className="w-4 h-4" />}
           >
             Yes, Save History
@@ -54,8 +54,8 @@ export const ConsentModal: React.FC<ConsentModalProps> = ({ onConsentGiven }) =>
           <Button
             onClick={() => onConsentGiven(false)}
             variant="outline" 
-            className="flex-1"
-            icon={<X className="w-4 h-4 flex items-center rounded-xl border border-gray-300" />}
+            className="flex-1 flex items-center rounded-xl border border-gray-300"
+            icon={<X className="w-4 h-4 " />}
           >
             No, Don't Save
           </Button>
