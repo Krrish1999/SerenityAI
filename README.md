@@ -233,16 +233,16 @@ The project includes a detailed guide for testing the Stripe integration. Please
 For testing purposes, you can use these sample accounts with different roles:
 
 **Therapist accounts:**
-- Email: `dr.johnson@Serenity Ai.com` - Anxiety specialist
+- Email: `therapist@gmail.com` - Test account
 - Email: `dr.patel@Serenity Ai.com` - Relationship counselor
 - Email: `dr.thompson@Serenity Ai.com` - Trauma specialist
 
 **Patient accounts:**
-- Email: `alice.johnson@email.com` - Anxiety patient
+- Email: `patient@gmail.com` - Test account
 - Email: `bob.smith@email.com` - Depression patient
 - Email: `emma.brown@email.com` - Grief counseling
 
-All test accounts use the password: `Password123!`
+All test accounts use the password: `Patient@123`
 
 ## 🌐 Deployment
 
